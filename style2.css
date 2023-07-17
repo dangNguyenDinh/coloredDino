@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#dino{
+    top: 65vh;
+    left: 10vw;
+    position: absolute;
+    width: 7vw;
+    animation: headShake 2s infinite;
+    z-index: 1;
+}
+
+#background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url("./assetForDino/background.jpg") no-repeat;
+    background-size: 100%;
+}
+#background2{
+    position: absolute;
+    z-index: 2;
+    top: 73vh;
+    right: 0px;  
+    animation: pulse 3s infinite;  
+}    
+
+@keyframes floatToLeft {
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: -100px;
+    }
+}
+
+.fish{
+    position: absolute;
+    top: 75vh;
+    right: 110vw;
+    z-index: 1;
+    animation: marquee 4s linear;
+    width: 5vw;
+}
+
+@keyframes marquee {
+    0% {
+        left: 100vw;
+    }
+    
+    100% {
+        left: 0vw;
+    }
+  }
+
+  @keyframes inMarquee {
+    0% {
+        left: 0vw;
+    }
+    
+    100% {
+        left: 100vw;
+    }
+  }
+@keyframes jump {
+    0%{
+        transform: translateY(0vh);
+        z-index: 2;
+    }
+    50%{
+        transform: translateY(-25vh);
+        z-index: 2;
+        width: 6vw;
+
+    }
+    60%{
+        transform: translateY(-22vh);
+        z-index: 2;
+    }
+    70%{
+        transform: translateY(-18vh);
+        z-index: 2;
+    }
+    80%{
+        transform: translateY(-13vh);
+        z-index: 2;
+    }
+    90%{
+        transform: translateY(-8vh);
+        z-index: 2;
+    }
+    95%{
+        transform: translateY(-6vh);
+        z-index: 2;
+    }
+    98%{
+        transform: translateY(-4vh);
+        z-index: 2;
+    }
+    100%{
+        transform: translateY(-1vh);
+        z-index: 2;
+        width: 7vw;
+    }
+}
+#gameOver {
+    position: absolute;
+    top: 10vh;
+    transform: translateY(-50%);
+    left: 50vw;
+    transform: translateX(-50%);
+    animation: gameOver 1s linear;
+    display: none;
+}
+
+@keyframes gameOver {
+    0%{
+        top: 0;
+        width: 0;
+    }
+    100%{
+        top: 10vh;
+        width: inherit;
+    }
+}
+
+@keyframes sinkDino {
+    0%{
+        top: 65vh;
+    }
+    30%{
+        top: 80vh;
+    }
+    100%{
+        top: 100vh;
+    }
+}
+
+#replay{
+    position: absolute;
+    width: 30vw;
+    transform: translateX(50%);
+    right: 50%;
+    top: 50%;
+    display: none;
+}
+#score{
+    position: absolute;
+    background-color: aquamarine;
+    margin: 5vh;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1vh;
+    border-style: groove;
+}
+
+
+@media (max-width: 1080px) {
+    *{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    #background{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: url("./assetForDino/backgroundRres.jpg") no-repeat;
+        background-size: 100%;
+    }
+    #background2{
+        position: absolute;
+        width: 750vw;
+        z-index: 2;
+        top: 76vh;
+        right: 0px;  
+        animation: pulse 3s infinite;  
+    }   
+    #dino{
+        top: 77vh;
+        left: 10vw;
+        position: absolute;
+        width: 15vw;
+        animation: headShake 2s infinite;
+        z-index: 1;
+    }
+    .fish{
+        position: absolute;
+        top: 82vh;
+        right: 110vw;
+        z-index: 1;
+        animation: marquee 4s linear;
+        width: 9vw;
+    }
+    @keyframes jump {
+        0%{
+            transform: translateY(0vh);
+            z-index: 2;
+        }
+        50%{
+            transform: translateY(-10vh);
+            z-index: 2;
+    
+        }
+        60%{
+            transform: translateY(-8vh);
+            z-index: 2;
+        }
+        70%{
+            transform: translateY(-6vh);
+            z-index: 2;
+        }
+        80%{
+            transform: translateY(-5vh);
+            z-index: 2;
+        }
+        90%{
+            transform: translateY(-3vh);
+            z-index: 2;
+        }
+        95%{
+            transform: translateY(-2vh);
+            z-index: 2;
+        }
+        98%{
+            transform: translateY(-1vh);
+            z-index: 2;
+        }
+        100%{
+            transform: translateY(-0vh);
+            z-index: 2;
+        }
+    }
+    @keyframes sinkDino {
+        0%{
+            top: 77vh;
+        }
+        30%{
+            top: 80vh;
+        }
+        100%{
+            top: 100vh;
+        }
+    }
+    #gameOver {
+        width: 50%;
+        position: absolute;
+        top: 70vh;
+        transform: translateY(-50%);
+        left: 50vw;
+        transform: translateX(-50%);
+        animation: gameOver 1s linear;
+        display: none;
+    }
+    @keyframes gameOver {
+        0%{
+            top: 0;
+            width: 0;
+        }
+        100%{
+            top: 70vh;
+            width: 50%;
+        }
+    }
+    #replay{
+        position: absolute;
+        width: 50vw;
+        transform: translateX(50%);
+        right: 50%;
+        top: 50%;
+        display: none;
+    }
+    #score{
+        position: absolute;
+        background-color: aquamarine;
+        margin: 5vh;
+        width: 30vw;
+        height: 5vh;
+        text-align: center;
+        line-height: 5vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 1vh;
+        border-style: groove;
+    }
+    
+}
+

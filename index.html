@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myDino</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+    <h2>Press "enter" to jump</h2>
+    <audio id="audio" src="./assetForDino/y2mate.com - If I Had a Chicken Piano Tutorial Synthesia.mp3"></audio> 
+    <img src="./assetForDino/background2.png" alt="bg2" id="background2" width="130%">
+    <img src="./assetForDino/ready.png" alt="ready" class="ready">
+    <img src="./assetForDino/play.png" alt="play" class="play" onclick="switchPage()">
+    <script>
+        function switchPage(){
+            document.getElementsByClassName("play")[0].style.display = "none";
+            document.getElementsByClassName("ready")[0].style.display = "block";
+            setTimeout(()=>{
+                document.getElementsByClassName("ready")[0].style.display = "none";
+                window.location.href = "index2.html";
+            },2000)
+        }
+        function playMusic(){
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+        playMusic();
+    </script>
+</body>
+</html>

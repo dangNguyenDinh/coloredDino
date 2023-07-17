@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+#background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url("./assetForDino/background.jpg") no-repeat;
+    background-size: 100%;
+}
+#background2{
+    position: absolute;
+    z-index: 2;
+    top: 73vh;
+    right: 0px;  
+    animation: pulse 3s infinite;  
+}   
+
+.play{
+    position: absolute;
+    width: 30vw;
+    transform: translateX(50%);
+    right: 50%;
+    top: 50%;
+}
+
+.ready{
+    position: absolute;
+    width: 30vw;
+    transform: translateX(50%);
+    right: 50%;
+    top: 30%;
+    animation: entrance 2s linear;
+    display: none;
+}
+
+h2{
+    position: absolute;
+    transform: translateX(50%);
+    right: 50%;
+    top: 30%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@keyframes entrance {
+    0%{
+        filter: blur(100px);
+    }
+    30%{
+        filter: blur(0px);
+    }
+    60%{
+        filter: blur(0px);   
+    }
+    100%{
+        filter: blur(100px);
+    }
+}
+
+
+
+
+/*responsive*/
+@media (max-width: 1080px) {
+    *{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    #background{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: url("./assetForDino/backgroundRres.jpg") no-repeat;
+        background-size: 100%;
+    }
+    #background2{
+        position: absolute;
+        width: 750vw;
+        z-index: 2;
+        top: 76vh;
+        right: 0px;  
+        animation: pulse 3s infinite;  
+    }   
+    .dino{
+        position: absolute;
+        display: none;
+    }
+    .play{
+        position: absolute;
+        width: 50vw;
+        transform: translateX(50%);
+        right: 50%;
+        top: 50%;
+    }
+    
+    .ready{
+        position: absolute;
+        width: 60vw;
+        transform: translateX(50%);
+        right: 50%;
+        top: 50%;
+        animation: entrance 2s linear;
+        display: none;
+    }
+    
+    h2{
+        position: absolute;
+        transform: translateX(50%);
+        right: 40%;
+        top: 30%;
+        width: 80%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    @keyframes entrance {
+        0%{
+            filter: blur(100px);
+        }
+        30%{
+            filter: blur(0px);
+        }
+        60%{
+            filter: blur(0px);   
+        }
+        100%{
+            filter: blur(100px);
+        }
+    }
+}
